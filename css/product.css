@@ -1,0 +1,160 @@
+.productpage {
+    width: 100vw;
+    background-color: background: aquamarine;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(aquamarine, #f1ebe5);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(aquamarine, #f1ebe5);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(aquamarine, #f1ebe5);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(aquamarine, #f1ebe5);
+    /* Standard syntax */
+    position: relative;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.productpagetitle {
+    display: inline-block;
+    width: 100%;
+    height: 80px;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    color: #0409d4;
+    font-size: 5vw;
+    position: relative;
+    top: 10%;
+    left: 5%;
+    align-items: center;
+    margin: 3%;
+}
+
+.paddingleft {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    float: left;
+    position: relative;
+}
+
+.productcontent {
+    display: table-cell;
+    vertical-align: middle;
+    height: 400px;
+    text-align: center;
+    position: relative;
+    vertical-align: middle;
+}
+
+.productcontent:before {
+    content: "";
+    box-sizing: border-box;
+    width: 87%;
+    height: 87%;
+    border: solid 7px #0409d4;
+    position: absolute;
+    top: 0;
+    left: 7%;
+    -webkit-transform: skewX(-2deg);
+    -moz-transform: skewX(-2deg);
+    -ms-transform: skewX(-2deg);
+    -o-transform: skewX(-2deg);
+    transform: skewX(-2deg);
+    z-index: 10;
+    vertical-align: middle;
+}
+
+.mouseoverframe {
+    box-sizing: border-box;
+    width: 87%;
+    height: 70%;
+    background-color: #0409d4;
+    background-image: url(../img/product/hoverimg2.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.65;
+    position: absolute;
+    top: 0;
+    left: 7%;
+    -webkit-transform: skewX(-2deg);
+    -moz-transform: skewX(-2deg);
+    -ms-transform: skewX(-2deg);
+    -o-transform: skewX(-2deg);
+    transform: skewX(-2deg);
+    z-index: 10;
+    vertical-align: middle;
+}
+
+.productimg {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 87%;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    left: 7%;
+    -webkit-transform: skewX(-2deg);
+    -moz-transform: skewX(-2deg);
+    -ms-transform: skewX(-2deg);
+    -o-transform: skewX(-2deg);
+    transform: skewX(-2deg);
+    align-content: center;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: 3;
+    vertical-align: middle;
+}
+
+.product-name {
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 18%;
+    left: 15%;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #0409d4;
+}
+
+.product-price {
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 18%;
+    right: 10%;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #0409d4;
+}
+
+.onsalecircle {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 40%;
+    background-color: yellow;
+    position: absolute;
+    top: -5%;
+    right: 3%;
+    z-index: 10;
+}
+
+.onsaleword {
+    letter-spacing: 1px;
+    color: #0409d4;
+    text-align: center;
+}
+
+
+/*
+.btn {
+    position: absolute;
+    left: 37%;
+    bottom: 10%;
+}
+
+.btn:hover {
+    color: yellow;
+}

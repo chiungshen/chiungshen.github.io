@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>Creepy Collection</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/index.css">
+    <link type="text/css" rel="stylesheet" href="css/product.css">
+    <script src="jquery-3.1.0.min.js"></script>
+    <script src="angular.min.js"></script>
+    <script src="js/product.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row col-md-12 col-sm-12 col-xs-12 homepage">
+            <h1 class="row indextitle">Creepy Collection</h1>
+            <div class="row eye">
+                <div id="sclera">
+                    <div id="iris"></div>
+                </div>
+                <script src="js/index.js"></script>
+            </div>
+            <h4 class="scrolldown">BUY NOW</h4>
+        </div>
+        <div class="row col-md-12 col-sm-12 col-xs-12 productpage">
+            <h1 class="row productpagetitle">：：Product：：</h1>
+            <div class="row" ng-app="store">
+                <div ng-app="appleStore">
+                    <div class="product" ng-controller="StoreController as store">
+                        <div class="col-md-4 col-sm-4 col-xs-10 productcontent" ng-repeat="product in store.products | orderBy:'price'" ng-mouseover="mouseMode=true" ng-mouseleave="mouseMode=false">
+                            <div class="mouseoverframe" ng-show="mouseMode"></div>
+                            <div class="productimg" ng-repeat="image in product.images">
+                                <img ng-src="{{image.url}}" alt="{{image.alt}}">
+                            </div>
+                            <div class="product-name">{{product.name}}</div>
+                            <div class="product-price">{{product.price|currency}}</div>
+                            <div ng-show="product.onSale" class="onsalecircle">
+                                <h3 class="onsaleword">ON SALE</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
